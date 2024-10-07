@@ -21,9 +21,6 @@ public class Main {
 
         System.out.println("Temperature: " + temperature);
 
-        System.out.println(WeatherAnalysis.analyzeTemperature(temperature));
-        System.out.println(WeatherAnalysis.analyzeHumidity(humidity));
-        System.out.println(WeatherAnalysis.analyzePressure(pressure));
         String weather = WeatherAnalysis.weatherPredict(temperature, humidity, pressure);
         System.out.println(weather);
     }

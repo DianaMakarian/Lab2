@@ -9,13 +9,20 @@ public abstract class DataSensors {
 
     protected  String type;
 
+    protected String measurement;
+
     abstract int getData();
 
     public String getType() {
         return type;
     }
+
+    public String getMeasurement() {
+        return measurement;
+    }
 }
 
+// І класи з переписуваннями Override
 class TemperatureSensor extends DataSensors {
     public TemperatureSensor() {
         type = "Temperature";
@@ -28,6 +35,10 @@ class TemperatureSensor extends DataSensors {
     @Override
     public String toString() {
         return "Temperature: ";
+    }
+    @Override
+    public String getMeasurement() {
+        return "°C";
     }
 }
 
@@ -44,6 +55,11 @@ class HumiditySensor extends DataSensors {
     public String toString() {
         return "Humidity: ";
     }
+
+    @Override
+    public String getMeasurement() {
+        return "%";
+    }
 }
 
 class PressureSensor extends DataSensors {
@@ -58,6 +74,11 @@ class PressureSensor extends DataSensors {
     @Override
     public String toString() {
         return "Pressure: ";
+    }
+
+    @Override
+    public String getMeasurement() {
+        return "hPa";
     }
 }
 

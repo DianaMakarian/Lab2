@@ -2,19 +2,19 @@ package com.Lab1;
 
 public class WeatherAnalysis {
 
-    public static String analyzeTemperature(int temperature) {
+    public String analyzeTemperature(int temperature) {
         if (temperature < 0) return "Низька";
         if (temperature < 20) return "Середня";
         return "Висока";
     }
 
-    public static String analyzeHumidity(int humidity) {
+    public String analyzeHumidity(int humidity) {
         if (humidity < 30) return "Низька";
         if (humidity < 80) return "Середня";
         return "Висока";
     }
 
-    public static String analyzePressure(int pressure) {
+    public String analyzePressure(int pressure) {
         if (pressure < 1000) return "Низька";
         if (pressure < 1010) return "Середня";
         return "Висока";
