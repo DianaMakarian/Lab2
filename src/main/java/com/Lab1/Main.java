@@ -7,21 +7,21 @@ package com.Lab1;
 public class Main {
     public static void main(String[] args) {
 
-        TemperatureSensor TemperatureData = new TemperatureSensor();
-        PressureSensor PressureData = new PressureSensor();
-        HumiditySensor HumidityData = new HumiditySensor();
+        TemperatureSensor TData = new TemperatureSensor();
+        PressureSensor PData = new PressureSensor();
+        HumiditySensor HData = new HumiditySensor();
 
-        int temperature = TemperatureData.getData();
-        int humidity = HumidityData.getData();
-        int pressure = PressureData.getData();
-
-        System.out.println("Pressure: " + pressure);
-
-        System.out.println("Humidity: " + humidity);
-
-        System.out.println("Temperature: " + temperature);
+        int temperature = TData.getData();
+        int humidity = HData.getData();
+        int pressure = PData.getData();
 
         String weather = WeatherAnalysis.weatherPredict(temperature, humidity, pressure);
-        System.out.println(weather);
+
+        Display d = new Display();
+        d.display(temperature, humidity, pressure, TData.getMeasurement(), HData.getMeasurement(), PData.getMeasurement());
+
+        d.display();
+
+        d.display(weather);
     }
 }

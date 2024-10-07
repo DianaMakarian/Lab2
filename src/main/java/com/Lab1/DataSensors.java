@@ -9,17 +9,12 @@ public abstract class DataSensors {
 
     protected  String type;
 
-    protected String measurement;
-
     abstract int getData();
 
     public String getType() {
         return type;
     }
-
-    public String getMeasurement() {
-        return measurement;
-    }
+    abstract String getMeasurement();
 }
 
 // І класи з переписуваннями Override
