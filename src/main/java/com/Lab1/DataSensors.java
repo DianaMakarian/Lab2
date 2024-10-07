@@ -53,13 +53,11 @@ class PressureSensor extends DataSensors {
 
     @Override
     public int getData() {
-        return random_int(990,1200);
+        return random_int(995,1015);
     }
     @Override
     public String toString() {
         return "Pressure: ";
     }
-
-
 }
 

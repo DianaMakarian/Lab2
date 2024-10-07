@@ -8,8 +8,23 @@ public class Main {
     public static void main(String[] args) {
 
         TemperatureSensor TemperatureData = new TemperatureSensor();
+        PressureSensor PressureData = new PressureSensor();
+        HumiditySensor HumidityData = new HumiditySensor();
 
-        System.out.println("Temperature: " + TemperatureData.getData());
-        System.out.println("Type: " + TemperatureData.getType());
+        int temperature = TemperatureData.getData();
+        int humidity = HumidityData.getData();
+        int pressure = PressureData.getData();
+
+        System.out.println("Pressure: " + pressure);
+
+        System.out.println("Humidity: " + humidity);
+
+        System.out.println("Temperature: " + temperature);
+
+        System.out.println(WeatherAnalysis.analyzeTemperature(temperature));
+        System.out.println(WeatherAnalysis.analyzeHumidity(humidity));
+        System.out.println(WeatherAnalysis.analyzePressure(pressure));
+        String weather = WeatherAnalysis.weatherPredict(temperature, humidity, pressure);
+        System.out.println(weather);
     }
 }

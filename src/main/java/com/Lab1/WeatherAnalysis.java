@@ -2,19 +2,19 @@ package com.Lab1;
 
 public class WeatherAnalysis {
 
-    public String analyzeTemperature(int temperature) {
+    public static String analyzeTemperature(int temperature) {
         if (temperature < 0) return "Низька";
         if (temperature < 20) return "Середня";
         return "Висока";
     }
 
-    public String analyzeHumidity(int humidity) {
+    public static String analyzeHumidity(int humidity) {
         if (humidity < 30) return "Низька";
         if (humidity < 80) return "Середня";
         return "Висока";
     }
 
-    public String analyzePressure(int pressure) {
+    public static String analyzePressure(int pressure) {
         if (pressure < 1000) return "Низька";
         if (pressure < 1010) return "Середня";
         return "Висока";
@@ -32,10 +32,10 @@ public class WeatherAnalysis {
         else if (temperatureAnalysis.equals("Висока") && humidityAnalysis.equals("Низька") && pressureAnalysis.equals("Висока")) {
             return "Сонячна суха погода";
         }
-        else if (temperatureAnalysis.equals("Висока") && humidityAnalysis.equals("Середній") && pressureAnalysis.equals("Висока")) {
+        else if (temperatureAnalysis.equals("Висока") && humidityAnalysis.equals("Середня") && pressureAnalysis.equals("Висока")) {
             return "Спекотна ясна погода, але не задушлива";
         }
-        else if (temperatureAnalysis.equals("Висока") && humidityAnalysis.equals("Середній") && pressureAnalysis.equals("Низька")) {
+        else if (temperatureAnalysis.equals("Висока") && humidityAnalysis.equals("Середня") && pressureAnalysis.equals("Низька")) {
             return "Спектона погода, з підвищеною ймовірністю дощів або штормів";
         }
         else if (temperatureAnalysis.equals("Середня") && humidityAnalysis.equals("Висока") && pressureAnalysis.equals("Низька")) {
@@ -53,8 +53,11 @@ public class WeatherAnalysis {
         else if (temperatureAnalysis.equals("Низька") && humidityAnalysis.equals("Висока") && pressureAnalysis.equals("Низька")) {
             return "Ймовірність снігу або дощу";
         }
-        else if (temperatureAnalysis.equals("Низька") && humidityAnalysis.equals("Середній") && pressureAnalysis.equals("Висока")) {
+        else if (temperatureAnalysis.equals("Низька") && humidityAnalysis.equals("Середня") && pressureAnalysis.equals("Висока")) {
             return "Холодна ясна погода без значних опадів";
+        }
+        else if (temperatureAnalysis.equals("Низька") && humidityAnalysis.equals("Середня") && pressureAnalysis.equals("Низька")) {
+            return "Холодна, з ймовірними опадами у вигляді снігу або мокрого снігу, можливе похмуре небо";
         }
         else {
             return "Погода нестабільна, можливі зміни";
